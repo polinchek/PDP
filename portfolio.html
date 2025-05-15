@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Maximum Records</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">MAXIMUM <span>RECORDS</span></a>
+            
+            <nav id="nav">
+                <a href="index.html">Главная</a>
+                
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">О нас <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Оборудование</a>
+                        <a href="portfolio.html" class="active">Портфолио</a>
+                        <a href="reviews.html">Отзывы</a> 
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+                
+                <a href="services.html">Услуги</a>
+                <a href="contacts.html#booking" class="btn btn-book">Записаться</a>
+            </nav>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PORTFOLIO HERO SECTION -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Наше портфолио</h1>
+            <p>Лучшие работы, созданные в нашей студии</p>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GRID SECTION -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="track">Треки</button>
+                <button class="filter-btn" data-filter="svedenye">Сведение</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Проекты будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Хотите попасть в наше портфолио?</h2>
+            <p>Запишитесь в нашу студию прямо сейчас</p>
+            <a href="contacts.html#booking" class="btn btn-hero">Забронировать студию</a>
+        </div>
+    </section>
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content compact-modal">
+        <span class="close-modal">&times;</span>
+        <h2>Записаться в студию</h2>
+        
+        <form class="booking-form" id="bookingForm" method="POST">
+            <input type="hidden" name="form_type" value="studio_booking">
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-phone icon"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-sliders-h icon"></i>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="Дистрибуция">Дистрибуция</option>
+                        <option value="Гострайтинг">Гострайтинг</option>
+                        <option value="Час на студии">Час на студии</option>
+                        <option value="Сведение">Сведение</option>
+                        <option value="Аранжировка">Аранжировка</option>
+                        <option value="Обложка на трек">Обложка на трек</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <div class="input-with-icon">
+                        <i class="fas fa-calendar icon"></i>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+                
+                <div class="form-group half-width">
+                    <div class="input-with-icon">
+                        <i class="fas fa-clock icon"></i>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-comment icon"></i>
+                    <textarea id="comment" name="comment" placeholder="Ваши пожелания или комментарий" rows="2"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group" style="display: none;">
+                <input type="text" name="honeypot" value="">
+            </div>
+            
+            <button type="submit" class="btn btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">MAXIMUM <span>RECORDS</span></div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Maximum Records. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="portfolio.js"></script>
+    <audio id="audio-player" style="display: none;"></audio>
+</body>
+</html>

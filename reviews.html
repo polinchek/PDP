@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о нашей студии</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <h2>Отзывы наших клиентов</h2>
+            
+            <!-- Форма для добавления отзыва -->
+            <div class="review-form-container">
+                <h3>Оставьте свой отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-group-review">
+                        <label for="userName">Ваше имя</label>
+                        <input type="text" id="userName" name="userName" required>
+                    </div>
+                    
+                    <div class="form-group-review">
+                        <label>Ваша оценка</label>
+                        <div class="rating-stars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                    </div>
+                    
+                    <div class="form-group-review">
+                        <label for="reviewText">Текст отзыва</label>
+                        <textarea id="reviewText" name="reviewText" required></textarea>
+                    </div>
+                    
+                    <div class="form-group-review">
+                        <label>Фотографии (необязательно)</label>
+                        <div class="photo-upload">
+                            <label for="reviewPhotos" class="photo-upload-label">
+                                <i class="fas fa-camera"></i> Выбрать фото
+                            </label>
+                            <input type="file" id="reviewPhotos" name="reviewPhotos" multiple accept="image/*" style="display: none;">
+                            <span id="fileNames" style="color: #a0a0a0;"></span>
+                        </div>
+                        <div class="photo-preview" id="photoPreview"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-submit">Отправить отзыв</button>
+                </form>
+            </div>
+            
+            <!-- Список отзывов -->
+            <div class="reviews-list" id="reviewsList">
+                <!-- Пример отзыва 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Анна" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Анна</div>
+                            <div class="review-date">15 мая 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Отличная студия! Оборудование на высшем уровне, звукорежиссеры профессионалы. 
+                        Записали трек лучше, чем ожидали. Обязательно вернемся для следующего проекта!
+                    </div>
+                    <div class="review-photos">
+                        <div class="review-photo">
+                            <img src="https://via.placeholder.com/300x200" alt="Фото студии">
+                        </div>
+                        <div class="review-photo">
+                            <img src="https://via.placeholder.com/300x200" alt="Оборудование">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Пример отзыва 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Максим" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Максим</div>
+                            <div class="review-date">2 апреля 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Хорошая студия с приятной атмосферой. Единственное - было немного шумно из-за ремонта у соседей, 
+                        но персонал сделал все возможное, чтобы минимизировать неудобства. Результатом записи доволен.
+                    </div>
+                </div>
+                
+                <!-- Пример отзыва 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Елена" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Елена</div>
+                            <div class="review-date">10 марта 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Записывали вокал для альбома. Очень понравилось работать со звукорежиссером - дал много полезных советов. 
+                        Студия оборудована всем необходимым, есть разные микрофоны на выбор. Получилось именно то звучание, которое мы хотели.
+                    </div>
+                    <div class="review-photos">
+                        <div class="review-photo">
+                            <img src="https://via.placeholder.com/300x200" alt="Запись вокала">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно для просмотра фото -->
+    <div class="photo-modal" id="photoModal">
+        <span class="close-photo-modal">&times;</span>
+        <div class="photo-modal-content">
+            <img id="modalPhoto" src="" alt="Увеличенное фото">
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+   <script src="reviews.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | Maximum Records</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- HEADER -->
+   <header id="header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">MAXIMUM <span>RECORDS</span></a>
+        
+        <nav id="nav">
+            <a href="index.html">Главная</a>
+            
+            <div class="dropdown">
+                <a href="about.html" class="dropbtn">О нас <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="equipment.html">Оборудование</a>
+                    <a href="portfolio.html">Портфолио</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+            
+            <a href="services.html">Услуги</a>
+            <a href="contacts.html#booking" class="btn btn-book">Записаться</a>
+            </nav>
+        
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            
+            <div class="services-grid">
+                <!-- Дистрибуция -->
+                <div class="service-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Дистрибуция</h3>
+                    <p>Размещение вашей музыки на всех цифровых платформах</p>
+                    <span class="price">990–2 300 ₽</span>
+                    <button class="btn btn-details" data-service="distribution">Подробнее</button>
+                </div>
+                
+                <!-- Гострайтинг -->
+                <div class="service-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Гострайтинг</h3>
+                    <p>Профессиональное написание текстов песен</p>
+                    <span class="price">3 500 ₽</span>
+                    <button class="btn btn-details" data-service="ghostwriting">Подробнее</button>
+                </div>
+                
+                <!-- Час на студии -->
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Час на студии</h3>
+                    <p>Профессиональная запись со звукорежиссером</p>
+                    <span class="price">900 ₽</span>
+                    <button class="btn btn-details" data-service="studio-hour">Подробнее</button>
+                </div>
+                
+                <!-- Сведение -->
+                <div class="service-card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Сведение</h3>
+                    <p>Профессиональное сведение и мастеринг треков</p>
+                    <span class="price">3 000–7 000 ₽</span>
+                    <button class="btn btn-details" data-service="mixing">Подробнее</button>
+                </div>
+                
+                <!-- Аранжировка -->
+                <div class="service-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Аранжировка</h3>
+                    <p>Создание профессиональных аранжировок</p>
+                    <span class="price">4 000–15 000 ₽</span>
+                    <button class="btn btn-details" data-service="arrangement">Подробнее</button>
+                </div>
+                
+                <!-- Обложка на трек -->
+                <div class="service-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Обложка на трек</h3>
+                    <p>Профессиональный дизайн обложек для релизов</p>
+                    <span class="price">1 500–5 000 ₽</span>
+                    <button class="btn btn-details" data-service="cover-art">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна для услуг -->
+    <div class="modal service-modal" id="distribution-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Дистрибуция</h2>
+            <div class="service-description">
+                <div class="service-tier">
+                    <h3>Дистрибуция EASY</h3>
+                    <p>Размещение Вашей песни на стриминг-платформах (VK музыка, Apple Music, Яндекс.Музыка, Spotify и т.д.)</p>
+                    <p class="service-price">Стоимость: 990₽</p>
+                </div>
+                <div class="service-tier">
+                    <h3>Дистрибуция PRO</h3>
+                    <p>Включает все из "Дистрибуция EASY" + дополнительные услуги:</p>
+                    <ul>
+                        <li>Ссылка на бендлинк</li>
+                        <li>Проверка карточек на соответствие</li>
+                        <li>Написание пресс-релиза</li>
+                        <li>Отправка редакторам</li>
+                        <li>Добавление в каталог ВК сторис + ВК клипы</li>
+                        <li>Пресейв</li>
+                        <li>Добавление видеошота в Яндекс Музыку (при наличии)</li>
+                    </ul>
+                    <p class="service-price">Стоимость: 2300₽</p>
+                </div>
+                <button class="btn btn-order" data-service="Дистрибуция">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="ghostwriting-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Гострайтинг</h2>
+            <div class="service-description">
+                <p>Написание текста любой сложности!</p>
+                <p>Срок выполнения работы: 3-5 дней</p>
+                <p class="service-price">Стоимость: 3 500 ₽</p>
+                <button class="btn btn-order" data-service="Гострайтинг">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="studio-hour-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Час на студии</h2>
+            <div class="service-description">
+                <p>Эта услуга предусматривает:</p>
+                <ul>
+                    <li>Один час записи на студии со звукорежиссером</li>
+                    <li>Или час аренды студии</li>
+                </ul>
+                <p class="service-price">Стоимость: 900 ₽</p>
+                <button class="btn btn-order" data-service="Час на студии">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="mixing-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Сведение</h2>
+            <div class="service-description">
+                <p>Услуга предусматривает дистанционное сведение трека и мастеринг песни в течении одной недели</p>
+                <p>Цена варьируется от сложности работы</p>
+                <p class="service-price">Стоимость: 3 000–7 000 ₽</p>
+                <button class="btn btn-order" data-service="Сведение">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="arrangement-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Аранжировка</h2>
+            <div class="service-description">
+                <p>Профессиональная аранжировка вашего трека с учетом всех пожеланий</p>
+                <p>Стоимость зависит от сложности и жанра</p>
+                <p class="service-price">Стоимость: 4 000–15 000 ₽</p>
+                <button class="btn btn-order" data-service="Аранжировка">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="cover-art-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Обложка на трек</h2>
+            <div class="service-description">
+                <p>Вам предоставляется пример вашей обложки при точном и подробном описании, что именно вам нужно.</p>
+                <p>Вы можете:</p>
+                <ul>
+                    <li>Скидывать пожелания или пример похожей картинки, какую сами бы хотели получить</li>
+                    <li>Или оставить свою идею на усмотрение нашего классного дизайнера</li>
+                </ul>
+                <p class="service-price">Стоимость: 1 500–5 000 ₽</p>
+                <button class="btn btn-order" data-service="Обложка на трек">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- CTA секция -->
+<!-- CTA секция -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Хотите записаться в нашей студии?</h2>
+        <p>Используйте профессиональное оборудование для создания качественной музыки</p>
+        <a href="contacts.html#booking" class="btn btn-book">ЗАБРОНИРОВАТЬ СТУДИЮ</a>
+    </div>
+</section>
+
+   <!-- FOOTER -->
+   <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">MAXIMUM <span>RECORDS</span></div>
+            </div>
+            
+            <div class="footer-col">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Maximum Records. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Модальное окно услуги -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modalServiceContent">
+                <!-- Контент будет загружен через JS -->
+            </div>
+            
+            <!-- Форма записи (изначально скрыта) -->
+            <div id="bookingForm" style="display:none;">
+                <h3>Запись на услугу: <span id="serviceName"></span></h3>
+                <form id="serviceBookingForm">
+                    <input type="hidden" id="selectedService" name="service">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-book">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script> <!-- Основной скрипт сайта -->
+    <script src="services.js"></script> <!-- Скрипт для работы страницы услуг -->
+</body>
+</html>

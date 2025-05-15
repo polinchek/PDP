@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Maximum Records</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">MAXIMUM <span>RECORDS</span></a>
+            
+            <nav id="nav">
+                <a href="index.html">Главная</a>
+                
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">О нас <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Оборудование</a>
+                        <a href="portfolio.html">Портфолио</a>
+                        <a href="reviews.html">Отзывы</a> 
+                        <a href="contacts.html" class="active">Контакты</a>
+                    </div>
+                </div>
+                
+                <a href="services.html">Услуги</a>
+                <a href="contacts.html#booking" class="btn btn-book">Записаться</a>
+            </nav>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACTS HERO SECTION -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами для записи в студию или получения дополнительной информации</p>
+        </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Адрес</h3>
+                            <p>г. Санкт-Петербург, ул. Маршала Говорова, 12, корп. 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p><a href="tel:+79217550840">+7 (921) 755-08-40</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@maximumrecords.ru">info@maximumrecords.ru</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Часы работы</h3>
+                            <p>Пн-Вс: 10:00 - 23:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aec375775e1be8a7246fb3249abe1f3e9cec4e64d8af30dd0efb2742f0381ee8d&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <h2>Записаться в студию</h2>
+            <p>Оставьте заявку и мы свяжемся с вами для уточнения деталей</p>
+            
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email">
+                </div>
+                
+                <div class="form-group">
+                    <select>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="recording">Запись вокала</option>
+                        <option value="mixing">Сведение</option>
+                        <option value="mastering">Мастеринг</option>
+                        <option value="full">Полный цикл</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Комментарий или пожелания"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-hero">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Записаться в студию</h2>
+            
+            <form class="booking-form" id="bookingForm" method="POST">
+                <input type="hidden" name="form_type" value="studio_booking">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-sliders-h"></i>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="Дистрибуция">Дистрибуция</option>
+                        <option value="Гострайтинг">Гострайтинг</option>
+                        <option value="Час на студии">Час на студии</option>
+                        <option value="Сведение">Сведение</option>
+                        <option value="Аранжировка">Аранжировка</option>
+                        <option value="Обложка на трек">Обложка на трек</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-clock"></i>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                
+                <div class="form-group" style="display: none;">
+                    <input type="text" name="honeypot" value="">
+                </div>
+                
+                <button type="submit" class="btn btn-submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">MAXIMUM <span>RECORDS</span></div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Maximum Records. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

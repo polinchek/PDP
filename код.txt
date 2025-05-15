@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Records | Профессиональная студия звукозаписи</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+   <!-- HEADER -->
+   <header id="header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">MAXIMUM <span>RECORDS</span></a>
+        
+        <nav id="nav">
+            <a href="index.html">Главная</a>
+            
+            <div class="dropdown">
+                <a href="about.html" class="dropbtn">О нас <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="equipment.html">Оборудование</a>
+                    <a href="portfolio.html">Портфолио</a>
+                    <a href="reviews.html">Отзывы</a> 
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+            
+            <a href="services.html">Услуги</a>
+            <a href="contacts.html#booking" class="btn btn-book">Записаться</a>
+            </nav>
+        
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Профессиональная студия звукозаписи</h1>
+            <p>Создаем качественный звук для артистов и музыкантов</p>
+            <a href="contacts.html#booking" class="btn btn-hero">Забронировать студию</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            
+            <div class="services-grid">
+                <!-- Дистрибуция -->
+                <div class="service-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Дистрибуция</h3>
+                    <p>Размещение вашей музыки на всех цифровых платформах</p>
+                    <span class="price">990–2 300 ₽</span>
+                    <button class="btn btn-details" data-service="distribution">Подробнее</button>
+                </div>
+                
+                <!-- Гострайтинг -->
+                <div class="service-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Гострайтинг</h3>
+                    <p>Профессиональное написание текстов песен</p>
+                    <span class="price">3 500 ₽</span>
+                    <button class="btn btn-details" data-service="ghostwriting">Подробнее</button>
+                </div>
+                
+                <!-- Час на студии -->
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Час на студии</h3>
+                    <p>Профессиональная запись со звукорежиссером</p>
+                    <span class="price">900 ₽</span>
+                    <button class="btn btn-details" data-service="studio-hour">Подробнее</button>
+                </div>
+                
+                <!-- Сведение -->
+                <div class="service-card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Сведение</h3>
+                    <p>Профессиональное сведение и мастеринг треков</p>
+                    <span class="price">3 000–7 000 ₽</span>
+                    <button class="btn btn-details" data-service="mixing">Подробнее</button>
+                </div>
+                
+                <!-- Аранжировка -->
+                <div class="service-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Аранжировка</h3>
+                    <p>Создание профессиональных аранжировок</p>
+                    <span class="price">4 000–15 000 ₽</span>
+                    <button class="btn btn-details" data-service="arrangement">Подробнее</button>
+                </div>
+                
+                <!-- Обложка на трек -->
+                <div class="service-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Обложка на трек</h3>
+                    <p>Профессиональный дизайн обложек для релизов</p>
+                    <span class="price">1 500–5 000 ₽</span>
+                    <button class="btn btn-details" data-service="cover-art">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна для услуг -->
+    <div class="modal service-modal" id="distribution-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Дистрибуция</h2>
+            <div class="service-description">
+                <div class="service-tier">
+                    <h3>Дистрибуция EASY</h3>
+                    <p>Размещение Вашей песни на стриминг-платформах (VK музыка, Apple Music, Яндекс.Музыка, Spotify и т.д.)</p>
+                    <p class="service-price">Стоимость: 990₽</p>
+                </div>
+                <div class="service-tier">
+                    <h3>Дистрибуция PRO</h3>
+                    <p>Включает все из "Дистрибуция EASY" + дополнительные услуги:</p>
+                    <ul>
+                        <li>Ссылка на бендлинк</li>
+                        <li>Проверка карточек на соответствие</li>
+                        <li>Написание пресс-релиза</li>
+                        <li>Отправка редакторам</li>
+                        <li>Добавление в каталог ВК сторис + ВК клипы</li>
+                        <li>Пресейв</li>
+                        <li>Добавление видеошота в Яндекс Музыку (при наличии)</li>
+                    </ul>
+                    <p class="service-price">Стоимость: 2300₽</p>
+                </div>
+                <button class="btn btn-order" data-service="Дистрибуция">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="ghostwriting-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Гострайтинг</h2>
+            <div class="service-description">
+                <p>Написание текста любой сложности!</p>
+                <p>Срок выполнения работы: 3-5 дней</p>
+                <p class="service-price">Стоимость: 3 500 ₽</p>
+                <button class="btn btn-order" data-service="Гострайтинг">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="studio-hour-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Час на студии</h2>
+            <div class="service-description">
+                <p>Эта услуга предусматривает:</p>
+                <ul>
+                    <li>Один час записи на студии со звукорежиссером</li>
+                    <li>Или час аренды студии</li>
+                </ul>
+                <p class="service-price">Стоимость: 900 ₽</p>
+                <button class="btn btn-order" data-service="Час на студии">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="mixing-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Сведение</h2>
+            <div class="service-description">
+                <p>Услуга предусматривает дистанционное сведение трека и мастеринг песни в течении одной недели</p>
+                <p>Цена варьируется от сложности работы</p>
+                <p class="service-price">Стоимость: 3 000–7 000 ₽</p>
+                <button class="btn btn-order" data-service="Сведение">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="arrangement-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Аранжировка</h2>
+            <div class="service-description">
+                <p>Профессиональная аранжировка вашего трека с учетом всех пожеланий</p>
+                <p>Стоимость зависит от сложности и жанра</p>
+                <p class="service-price">Стоимость: 4 000–15 000 ₽</p>
+                <button class="btn btn-order" data-service="Аранжировка">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal service-modal" id="cover-art-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Обложка на трек</h2>
+            <div class="service-description">
+                <p>Вам предоставляется пример вашей обложки при точном и подробном описании, что именно вам нужно.</p>
+                <p>Вы можете:</p>
+                <ul>
+                    <li>Скидывать пожелания или пример похожей картинки, какую сами бы хотели получить</li>
+                    <li>Или оставить свою идею на усмотрение нашего классного дизайнера</li>
+                </ul>
+                <p class="service-price">Стоимость: 1 500–5 000 ₽</p>
+                <button class="btn btn-order" data-service="Обложка на трек">Заказать услугу</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDIO SECTION -->
+    <section class="studio" id="studio">
+        <div class="container">
+            <h2>Наша студия</h2>
+            
+            <div class="studio-content">
+                <div class="studio-text">
+                    <h3>Профессиональное оборудование</h3>
+                    <p>Наша студия оснащена лучшим оборудованием от ведущих мировых производителей:</p>
+                    
+                    <ul class="equipment-list">
+                        <li>Компьютер iMac (2021)</li>
+                        <li>Наушники Beyerdynamics 990 PRO</li>
+                        <li>Звуковая карта UAD Apollo Twin MkII</li>
+                        <li>Микрофон СОЮЗ 1973</li>
+                        <li>Студийные мониторы Genelec 8040BPM-6</li>
+                        <li>MIDI клавиатура Arturia KeyLab mkII</li>
+                    </ul>
+                </div>
+                <div class="studio-photo-container">
+                    <img src="image/studia.jpg" alt="Интерьер студии" class="studio-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Наши проекты</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="D:/Сайтик/image/DNT.jpg" alt="обложка">
+                    </div>
+                    <h3>Трек "don't stp"</h3>
+                    <p>Запись, сведение и мастеринг MAXIMUM RECORDS</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="D:/Сайтик/image/barra.jpg" alt="обложка">
+                    </div>
+                    <h3>Трек "Barracuda"</h3>
+                    <p>Запись, сведение и мастеринг MAXIMUM RECORDS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Адрес</h3>
+                            <p>г. Санкт-Петербург, ул. Маршала Говорова, 12, корп. 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p><a href="tel:+79217550840">+7 (921) 755-08-40</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@maximumrecords.ru">info@maximumrecords.ru</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Часы работы</h3>
+                            <p>Пн-Вс: 10:00 - 23:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aec375775e1be8a7246fb3249abe1f3e9cec4e64d8af30dd0efb2742f0381ee8d&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content compact-modal">
+        <span class="close-modal">&times;</span>
+        <h2>Записаться в студию</h2>
+        
+        <form class="booking-form" id="bookingForm" method="POST">
+            <input type="hidden" name="form_type" value="studio_booking">
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-phone icon"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-sliders-h icon"></i>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="Дистрибуция">Дистрибуция</option>
+                        <option value="Гострайтинг">Гострайтинг</option>
+                        <option value="Час на студии">Час на студии</option>
+                        <option value="Сведение">Сведение</option>
+                        <option value="Аранжировка">Аранжировка</option>
+                        <option value="Обложка на трек">Обложка на трек</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <div class="input-with-icon">
+                        <i class="fas fa-calendar icon"></i>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+                
+                <div class="form-group half-width">
+                    <div class="input-with-icon">
+                        <i class="fas fa-clock icon"></i>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-comment icon"></i>
+                    <textarea id="comment" name="comment" placeholder="Ваши пожелания или комментарий" rows="2"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group" style="display: none;">
+                <input type="text" name="honeypot" value="">
+            </div>
+            
+            <button type="submit" class="btn btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">MAXIMUM <span>RECORDS</span></div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://vk.com/namaximumrecords" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="https://t.me/your_channel" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/your_profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Maximum Records. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файла -->
+    <script src="script.js"></script>
+</body>
+</html>
+document.addEventListener('DOMContentLoaded', function() {
+  // Обработка выпадающего меню
+  if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropbtn').forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              const dropdown = this.closest('.dropdown');
+              dropdown.classList.toggle('active');
+          });
+      });
+  }
+
+  // Обработка модальных окон услуг
+  document.querySelectorAll('.btn-details').forEach(function(button) {
+      button.addEventListener('click', function() {
+          const serviceId = this.getAttribute('data-service');
+          document.getElementById(serviceId + '-modal').style.display = 'flex';
+      });
+  });
+
+  // Обработка кнопок "Заказать услугу"
+  document.querySelectorAll('.btn-order').forEach(function(button) {
+      button.addEventListener('click', function() {
+          const serviceName = this.getAttribute('data-service');
+          const modal = this.closest('.modal');
+          modal.style.display = 'none';
+          
+          const bookingModal = document.getElementById('modal');
+          bookingModal.style.display = 'flex';
+          
+          const serviceSelect = document.getElementById('service');
+          serviceSelect.value = serviceName;
+      });
+  });
+
+  // Обработка кнопок "Записаться" и "Забронировать студию"
+  document.querySelectorAll('[href*="#booking"], .btn-hero').forEach(function(button) {
+      button.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.getElementById('modal').style.display = 'flex';
+      });
+  });
+
+  // Закрытие модальных окон
+  document.querySelectorAll('.close-modal').forEach(function(closeBtn) {
+      closeBtn.addEventListener('click', function() {
+          this.closest('.modal').style.display = 'none';
+      });
+  });
+
+  // Закрытие модальных окон при клике вне их
+  window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal')) {
+          event.target.style.display = 'none';
+      }
+  });
+
+  // Бургер-меню
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  
+  if (burger && nav) {
+      burger.addEventListener('click', function() {
+          this.classList.toggle('active');
+          nav.classList.toggle('active');
+      });
+  }
+  
+  // Фиксированный хедер
+  window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+
+  // Обработка формы
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+      bookingForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Простая валидация
+          const name = this.querySelector('#name');
+          const phone = this.querySelector('#phone');
+          const email = this.querySelector('#email');
+          const service = this.querySelector('#service');
+          
+          if (!name.value.trim()) {
+              alert('Пожалуйста, введите ваше имя');
+              return;
+          }
+          
+          if (!phone.value.trim()) {
+              alert('Пожалуйста, введите ваш телефон');
+              return;
+          }
+          
+          if (!email.value.trim()) {
+              alert('Пожалуйста, введите ваш email');
+              return;
+          }
+          
+          if (!service.value) {
+              alert('Пожалуйста, выберите услугу');
+              return;
+          }
+          
+          // Здесь можно добавить отправку формы
+          console.log('Форма отправлена:', {
+              name: name.value,
+              phone: phone.value,
+              email: email.value,
+              service: service.value,
+              date: this.querySelector('#date').value,
+              time: this.querySelector('#time').value
+          });
+          
+          alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+          this.reset();
+          document.getElementById('modal').style.display = 'none';
+      });
+  }
+});
+// Обработка модального окна услуг
+document.addEventListener('DOMContentLoaded', function() {
+    const modalButtons = document.querySelectorAll('.modal-open');
+    const modal = document.getElementById('serviceModal');
+    const modalContent = document.getElementById('modalServiceContent');
+    const closeButton = document.querySelector('.modal-close');
+    
+    // Данные услуг
+    const services = {
+        vocal: {
+            title: "Запись вокала",
+            description: "Профессиональная запись вокала с использованием микрофонов Neumann U87 и Avalon VT-737sp. Мы предлагаем индивидуальный подход к каждому вокалисту и помощь в настройке оптимального звучания.",
+            price: "от 3 000 ₽/час",
+            details: [
+                "Использование профессионального оборудования",
+                "Акустически обработанное помещение",
+                "Опытный звукорежиссер",
+                "Предварительная консультация"
+            ]
+        },
+        instruments: {
+            title: "Запись инструментов",
+            description: "Качественная запись акустических и электронных инструментов. Мы имеем опыт работы с гитарами, ударными, клавишными и оркестровыми инструментами.",
+            price: "от 2 500 ₽/час",
+            details: [
+                "Широкий выбор микрофонов",
+                "Амплифицированная и DI запись",
+                "Профессиональная обработка",
+                "Гибкие тарифы"
+            ]
+        },
+        mixing: {
+            title: "Сведение треков",
+            description: "Профессиональное сведение многодорожечных записей для получения сбалансированного и коммерческого звучания. Работаем во всех популярных жанрах.",
+            price: "от 5 000 ₽/трек",
+            details: [
+                "Баланс инструментов и вокала",
+                "Пространственная обработка",
+                "Динамическая обработка",
+                "До 3 правок включено"
+            ]
+        },
+        mastering: {
+            title: "Мастеринг",
+            description: "Финальная обработка трека для достижения коммерческого уровня громкости и качества звука. Подготовка трека к публикации на всех платформах.",
+            price: "от 3 500 ₽/трек",
+            details: [
+                "Оптимизация громкости",
+                "Коррекция частотного баланса",
+                "Подготовка для стриминга",
+                "Форматы: WAV, MP3, FLAC"
+            ]
+        },
+        composition: {
+            title: "Написание музыки",
+            description: "Создание оригинальной музыки и аранжировок под ваш проект. Работаем в различных жанрах от поп-музыки до кинематографических саундтреков.",
+            price: "от 15 000 ₽/трек",
+            details: [
+                "Индивидуальный подход",
+                "Полные аранжировки",
+                "Работа с текстами",
+                "Неограниченные правки"
+            ]
+        },
+        sounddesign: {
+            title: "Саунд-дизайн",
+            description: "Создание звуковых эффектов и атмосферы для видео, игр и мультимедиа проектов. Полный цикл производства звука для вашего продукта.",
+            price: "от 10 000 ₽/проект",
+            details: [
+                "Звуковые эффекты",
+                "Атмосферные лупы",
+                "Адаптивный звук для игр",
+                "Синхронизация с видео"
+            ]
+        }
+    };
+
+    // Открытие модального окна
+    modalButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const service = this.getAttribute('data-service');
+            const serviceData = services[service];
+            
+            let detailsHtml = '';
+            serviceData.details.forEach(item => {
+                detailsHtml += `<li>${item}</li>`;
+            });
+            
+            modalContent.innerHTML = `
+                <h2>${serviceData.title}</h2>
+                <p class="service-modal-description">${serviceData.description}</p>
+                <div class="service-price">${serviceData.price}</div>
+                <h3>Что включено:</h3>
+                <ul class="service-details">${detailsHtml}</ul>
+                <button class="btn btn-hero" onclick="window.location.href='contacts.html#booking'">Записаться</button>
+            `;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Закрытие модального окна
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Закрытие при клике вне окна
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+// Инициализация слайдера
+document.addEventListener('DOMContentLoaded', function() {
+    // Слайдер студии
+    const studioSwiper = new Swiper('.studio-slider .swiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Бургер-меню
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    
+    if (burger && nav) {
+        burger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    }
+    
+    // Фиксированный хедер при скролле
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Слайдер
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let slideInterval;
+    
+    // Инициализация слайдера
+    function initSlider() {
+        updateSlider();
+        startAutoSlide();
+        
+        // Обработчики событий
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+                resetAutoSlide();
+            });
+        });
+        
+        // Пауза при наведении
+        slider.addEventListener('mouseenter', pauseAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Обновление позиции слайдера
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    // Следующий слайд
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
+    // Предыдущий слайд
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
+    // Автопрокрутка
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    function pauseAutoSlide() {
+        clearInterval(slideInterval);
+    }
+    
+    function resetAutoSlide() {
+        pauseAutoSlide();
+        startAutoSlide();
+    }
+    
+    // Рейтинг звёздами
+    const stars = document.querySelectorAll('.rating-stars span');
+    let currentRating = 0;
+    
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            currentRating = rating;
+            
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        });
+        
+        star.addEventListener('mouseover', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('hover');
+                } else {
+                    s.classList.remove('hover');
+                }
+            });
+        });
+        
+        star.addEventListener('mouseout', function() {
+            stars.forEach(s => s.classList.remove('hover'));
+        });
+    });
+    
+    // Превью загруженного фото
+    const photoInput = document.getElementById('review-photo');
+    const photoPreview = document.getElementById('photo-preview');
+    
+    photoInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+                photoPreview.innerHTML = `
+                    <img src="${event.target.result}" alt="Превью фото">
+                    <button class="remove-photo" id="remove-photo">×</button>
+                `;
+                
+                document.getElementById('remove-photo').addEventListener('click', function() {
+                    photoPreview.innerHTML = '';
+                    photoInput.value = '';
+                });
+            };
+            
+            reader.readAsDataURL(file);
+        }
+    });
+    
+    // Отправка формы
+    document.getElementById('submit-review').addEventListener('click', function() {
+        const name = document.getElementById('user-name').value.trim();
+        const text = document.getElementById('review-text').value.trim();
+        const photo = photoInput.files[0];
+        
+        if (!name || !text || currentRating === 0) {
+            alert('Пожалуйста, заполните все обязательные поля и поставьте оценку!');
+            return;
+        }
+        
+        // Здесь будет код отправки данных на сервер
+        console.log({
+            name,
+            text,
+            rating: currentRating,
+            photo: photo ? photo.name : null
+        });
+        
+        // Очистка формы
+        document.getElementById('user-name').value = '';
+        document.getElementById('review-text').value = '';
+        photoPreview.innerHTML = '';
+        photoInput.value = '';
+        stars.forEach(star => star.classList.remove('active'));
+        currentRating = 0;
+        
+        // Уведомление
+        alert('Спасибо за ваш отзыв! После модерации он появится на сайте.');
+    });
+    
+    // Инициализация
+    initSlider();
+});
